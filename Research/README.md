@@ -77,20 +77,20 @@ Research/
 ## 📥 Adding New Research
 
 ### Quick Add (Recommended)
-1. **Drop files in `_Inbox/`**: PDF 논문, 마크다운 노트, 링크 등
-2. **AI Agent 실행**: Agent가 자동으로 분류하여 적절한 카테고리로 이동
-3. **확인**: 분류 로그에서 결과 확인
+1. **Drop files in `_Inbox/`**: PDF papers, markdown notes, links, etc.
+2. **Run AI Agent**: Agent automatically classifies and moves to appropriate categories
+3. **Verify**: Check results in classification log
 
 ### Manual Classification
-1. 논문을 읽고 주요 내용 파악
-2. [분류 가이드](_Inbox/classification_prompt.md) 참고
-3. 적절한 카테고리 README에 직접 추가
+1. Read paper and understand main content
+2. Refer to [classification guide](_Inbox/classification_prompt.md)
+3. Add directly to appropriate category README
 
 ### Classification Criteria
-- **A1**: 도구 실행 결과로 학습 (RL, API feedback)
-- **A2**: 출력 품질로 학습 (Self-refinement, Human feedback)
-- **T1**: 범용 사전학습 모델 (CLIP, Whisper, Embeddings)
-- **T2**: Agent 피드백으로 개선되는 도구 (Adaptive retrieval, Memory)
+- **A1**: Learning from tool execution results (RL, API feedback)
+- **A2**: Learning from output quality (Self-refinement, Human feedback)
+- **T1**: General-purpose pre-trained models (CLIP, Whisper, Embeddings)
+- **T2**: Tools improved by agent feedback (Adaptive retrieval, Memory)
 
 ---
 

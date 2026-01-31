@@ -108,26 +108,26 @@ def move_and_document(file, primary_cat, secondary_cats):
 - [Reason 2]
 ```
 
-### 링크만 추가 시 (부 카테고리)
+### Link Only (Secondary Category)
 ```markdown
 **Related**: See also [Paper Title] in [Primary Category]
 ```
 
-## 🚨 예외 처리
+## 🚨 Exception Handling
 
-### 분류 불가능한 경우
-- `_Inbox/Unclassified/` 폴더로 이동
-- 수동 검토 필요 플래그 추가
+### Cannot Classify
+- Move to `_Inbox/Unclassified/` folder
+- Add flag for manual review
 
-### 여러 카테고리에 동등하게 해당
-- 가장 AI SDM Agent에 직접적으로 적용 가능한 카테고리 선택
-- 우선순위: A1 > A2 > T2 > T1
+### Equally Applicable to Multiple Categories
+- Select category most directly applicable to AI SDM Agent
+- Priority: A1 > A2 > T2 > T1
 
-### 새로운 카테고리 필요
-- `_Inbox/New_Category_Proposals/` 폴더에 제안서 작성
-- 기존 카테고리 확장 가능성 먼저 검토
+### New Category Needed
+- Write proposal in `_Inbox/New_Category_Proposals/` folder
+- First review possibility of expanding existing categories
 
-## 📊 분류 로그 형식
+## 📊 Classification Log Format
 
 ```markdown
 # Classification Log
@@ -143,22 +143,22 @@ def move_and_document(file, primary_cat, secondary_cats):
 - **Action Taken**: Moved to A1, added link in A2
 ```
 
-## 🎯 분류 품질 체크리스트
+## 🎯 Classification Quality Checklist
 
-분류 전 확인:
-- [ ] 논문 제목과 초록을 읽었는가?
-- [ ] 주요 방법론을 파악했는가?
-- [ ] AI SDM Agent 적용 가능성을 평가했는가?
-- [ ] 카테고리 정의와 일치하는가?
-- [ ] 기존 카테고리 논문들과 유사성을 확인했는가?
+Before classification:
+- [ ] Read paper title and abstract?
+- [ ] Identified main methodology?
+- [ ] Evaluated applicability to AI SDM Agent?
+- [ ] Matches category definition?
+- [ ] Checked similarity with existing category papers?
 
-분류 후 확인:
-- [ ] README가 올바르게 업데이트되었는가?
-- [ ] 파일이 올바른 위치로 이동했는가?
-- [ ] 분류 로그가 기록되었는가?
-- [ ] 부 카테고리 링크가 추가되었는가?
+After classification:
+- [ ] README updated correctly?
+- [ ] File moved to correct location?
+- [ ] Classification logged?
+- [ ] Secondary category links added?
 
 ---
 
-**사용 방법**: 
-이 프롬프트를 AI Agent에게 제공하고 `_Inbox` 폴더를 스캔하도록 지시하세요.
+**Usage**: 
+Provide this prompt to AI Agent and instruct to scan `_Inbox` folder.
