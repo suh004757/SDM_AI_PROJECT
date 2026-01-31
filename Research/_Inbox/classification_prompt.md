@@ -1,60 +1,60 @@
-# AI Agent 분류 프롬프트
+# AI Agent Classification Prompt
 
 ## 📋 Task
 
-`_Inbox` 폴더의 리서치 자료를 분석하고 적절한 카테고리로 분류하세요.
+Analyze research materials in the `_Inbox` folder and classify them into appropriate categories.
 
-## 🎯 분류 카테고리
+## 🎯 Classification Categories
 
 ### A1: Tool Execution Signaled
-- **정의**: Agent가 도구 실행 결과로부터 학습
-- **신호 소스**: API 응답, 성공/실패 피드백, 실행 결과
-- **학습 방법**: Reinforcement Learning, Supervised Fine-tuning, DPO
-- **키워드**: RL, tool execution, API feedback, action selection, reward model, policy learning
+- **Definition**: Agent learns from tool execution results
+- **Signal Source**: API responses, success/failure feedback, execution results
+- **Learning Methods**: Reinforcement Learning, Supervised Fine-tuning, DPO
+- **Keywords**: RL, tool execution, API feedback, action selection, reward model, policy learning
 
 ### A2: Agent Output Signaled
-- **정의**: Agent가 자신의 출력 품질로부터 학습
-- **신호 소스**: 인간 피드백, 자기 평가, 결과 메트릭
-- **학습 방법**: Self-refinement, Preference learning, Iterative improvement
-- **키워드**: self-refinement, output quality, human feedback, preference learning, self-evaluation, DPO
+- **Definition**: Agent learns from its own output quality
+- **Signal Source**: Human feedback, self-evaluation, outcome metrics
+- **Learning Methods**: Self-refinement, Preference learning, Iterative improvement
+- **Keywords**: self-refinement, output quality, human feedback, preference learning, self-evaluation, DPO
 
 ### T1: Agent-Agnostic
-- **정의**: Agent와 독립적으로 작동하는 범용 도구
-- **특징**: 사전학습, 플러그앤플레이, 범용 목적
-- **예시**: CLIP, SAM, Whisper, 임베딩 모델
-- **키워드**: pre-trained, embedding, general-purpose, plug-and-play, foundation model
+- **Definition**: General-purpose tools that work independently of agents
+- **Characteristics**: Pre-trained, plug-and-play, general-purpose
+- **Examples**: CLIP, SAM, Whisper, embedding models
+- **Keywords**: pre-trained, embedding, general-purpose, plug-and-play, foundation model
 
 ### T2: Agent-Supervised
-- **정의**: Agent 피드백으로 개선되는 도구
-- **학습**: Agent 사용 패턴으로부터 적응
-- **예시**: Adaptive retrieval, Memory systems, Custom adapters
-- **키워드**: adaptive retrieval, memory system, tool adaptation, agent feedback, fine-tuning
+- **Definition**: Tools that improve based on agent feedback
+- **Learning**: Adapts from agent usage patterns
+- **Examples**: Adaptive retrieval, Memory systems, Custom adapters
+- **Keywords**: adaptive retrieval, memory system, tool adaptation, agent feedback, fine-tuning
 
-## 🔍 분류 프로세스
+## 🔍 Classification Process
 
-### Step 1: 파일 읽기
+### Step 1: Read Files
 ```python
-# Inbox의 모든 파일 스캔
+# Scan all files in Inbox
 files = scan_inbox_folder()
 for file in files:
     content = read_file(file)
     classify_and_move(file, content)
 ```
 
-### Step 2: 내용 분석
-다음을 확인:
-1. **제목/초록**: 주요 주제 파악
-2. **키워드**: 위 카테고리 키워드 매칭
-3. **방법론**: 학습 방법 (RL, Self-refinement, Pre-training, Adaptation)
-4. **신호 소스**: 무엇으로부터 학습하는가?
+### Step 2: Analyze Content
+Check the following:
+1. **Title/Abstract**: Identify main topic
+2. **Keywords**: Match with category keywords above
+3. **Methodology**: Learning method (RL, Self-refinement, Pre-training, Adaptation)
+4. **Signal Source**: What does it learn from?
 
-### Step 3: 분류 결정
+### Step 3: Classification Decision
 ```python
 def classify_research(content):
-    # 키워드 매칭
+    # Keyword matching
     keywords = extract_keywords(content)
     
-    # 점수 계산
+    # Calculate scores
     scores = {
         "A1": calculate_score(keywords, A1_KEYWORDS),
         "A2": calculate_score(keywords, A2_KEYWORDS),
@@ -62,10 +62,10 @@ def classify_research(content):
         "T2": calculate_score(keywords, T2_KEYWORDS)
     }
     
-    # 최고 점수 카테고리 선택
+    # Select category with highest score
     primary_category = max(scores, key=scores.get)
     
-    # 2차 카테고리 (점수가 임계값 이상)
+    # Secondary categories (score above threshold)
     secondary_categories = [
         cat for cat, score in scores.items() 
         if score > THRESHOLD and cat != primary_category
@@ -74,27 +74,27 @@ def classify_research(content):
     return primary_category, secondary_categories
 ```
 
-### Step 4: 파일 이동 및 문서화
+### Step 4: Move Files and Document
 ```python
 def move_and_document(file, primary_cat, secondary_cats):
-    # 1. 파일을 주 카테고리로 이동
+    # 1. Move file to primary category
     new_path = f"Research/{primary_cat}/{file.name}"
     move_file(file, new_path)
     
-    # 2. 주 카테고리 README 업데이트
+    # 2. Update primary category README
     update_category_readme(primary_cat, file, "full")
     
-    # 3. 부 카테고리에 링크 추가
+    # 3. Add links to secondary categories
     for cat in secondary_cats:
         update_category_readme(cat, file, "link")
     
-    # 4. 분류 로그 기록
+    # 4. Log classification
     log_classification(file, primary_cat, secondary_cats)
 ```
 
-## 📝 README 업데이트 템플릿
+## 📝 README Update Template
 
-### 새 논문 추가 시
+### Adding New Paper
 ```markdown
 #### [N+1]. [Paper Title] ([Author/Org], [Year])
 - **Paper**: [URL]
