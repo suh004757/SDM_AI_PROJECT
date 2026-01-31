@@ -111,6 +111,107 @@ def self_rag_report_generation(project_data):
 
 ---
 
+#### 4. MAKER: Solving a Million-Step LLM Task with Zero Errors (2025) ⭐ NEW
+- **Paper**: https://arxiv.org/abs/2511.09030
+- **Summary**: First system to solve 1M+ step LLM task with zero errors through extreme decomposition
+- **Key Contribution**: Massively Decomposed Agentic Processes (MDAPs) with multi-agent voting for error correction
+- **AI SDM Application**: Complex SDM workflows with zero-error requirement
+
+**Why Critical**:
+- **Extreme decomposition** strategy applicable to SDM task breakdown
+- Multi-agent voting → **Error correction** at each step
+- Proven scalability to complex, long-horizon tasks
+- Small models suffice (don't need SOTA reasoning models)
+
+**Implementation Concept**:
+```python
+class MDAProcess:
+    def __init__(self):
+        self.microagents = [MicroAgent(task) for task in decomposed_tasks]
+        self.voter = MultiAgentVoter()
+    
+    def execute_with_voting(self, task):
+        # Extreme decomposition
+        subtasks = decompose_to_minimal(task)
+        
+        for subtask in subtasks:
+            # Multiple agents execute
+            results = [agent.execute(subtask) for agent in self.microagents]
+            
+            # Voting for error correction
+            consensus = self.voter.vote(results)
+            
+            if consensus.confidence < threshold:
+                # Red-flag for human review
+                escalate_to_human(subtask, results)
+        
+        return final_result
+```
+
+**AI SDM Application**:
+- Project planning → Extreme decomposition into micro-tasks
+- Multi-agent validation of critical decisions
+- Zero-error requirement for client-facing deliverables
+
+---
+
+#### 5. AI Annotation Orchestration (2025) ⭐ NEW
+- **Paper**: https://arxiv.org/abs/2511.09785
+- **Summary**: Verification-oriented orchestration (self-verification + cross-verification) for LLM annotations
+- **Key Contribution**: 58% improvement in Cohen's kappa through orchestration; framework notation `verifier(annotator)`
+- **AI SDM Application**: Quality assurance for AI SDM outputs through systematic verification
+
+**Why Critical**:
+- **Self-verification**: Agent checks its own outputs (2x improvement over baseline)
+- **Cross-verification**: Multiple agents audit each other (37% improvement)
+- Directly applicable to report generation, risk assessment validation
+- Provides systematic framework for multi-model orchestration
+
+**Implementation Concept**:
+```python
+class VerificationOrchestrator:
+    def __init__(self):
+        self.annotators = [GPT4, Claude, Gemini]
+        self.verifiers = [GPT4, Claude, Gemini]
+    
+    def self_verify(self, annotator, output):
+        # Self-verification: annotator checks its own work
+        verification = annotator.verify(output)
+        if verification.confidence < threshold:
+            output = annotator.refine(output, verification.feedback)
+        return output
+    
+    def cross_verify(self, annotator, verifier, output):
+        # Cross-verification: different model audits
+        audit = verifier.audit(output)
+        if audit.has_errors:
+            output = annotator.correct(output, audit.corrections)
+        return output
+    
+    def orchestrate(self, task):
+        # Generate with annotator
+        output = self.annotators[0].generate(task)
+        
+        # Self-verification: Claude(Claude)
+        output = self.self_verify(self.annotators[1], output)
+        
+        # Cross-verification: Gemini(GPT)
+        output = self.cross_verify(
+            annotator=self.annotators[0],
+            verifier=self.annotators[2],
+            output=output
+        )
+        
+        return output
+```
+
+**AI SDM Application**:
+- Weekly reports → Self-verify before sending to stakeholders
+- Risk assessments → Cross-verify with multiple models
+- Critical decisions → Multi-model consensus before execution
+
+---
+
 ### 🟡 Medium Priority
 
 #### 4. Search-R1 (2025)

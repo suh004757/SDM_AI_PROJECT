@@ -26,7 +26,10 @@ Research/
 
 ## 🎯 Quick Navigation
 
-### By Priority
+### 🎯 **What's Your Need?**
+→ Use the [Decision Guide](DECISION_GUIDE.md) to find the right research for your problem!
+
+### By Priority (Recommended Learning Path)
 - 🔴 **Start Here**: [A1: Tool Execution Signaled](Agent_Adaptation/A1_Tool_Execution_Signaled/README.md)
 - 🔴 **Then Read**: [A2: Agent Output Signaled](Agent_Adaptation/A2_Agent_Output_Signaled/README.md)
 - 🟡 **After That**: [T2: Agent-Supervised](Tool_Adaptation/T2_Agent_Supervised/README.md)
@@ -47,6 +50,8 @@ Research/
 | 6.2 Explainability | A2: Output Signaled | [Link](Agent_Adaptation/A2_Agent_Output_Signaled/README.md) |
 | 2.5 Context Memory | T2: Agent-Supervised | [Link](Tool_Adaptation/T2_Agent_Supervised/README.md) |
 | 2.1 Data Ingestion | T1: Agent-Agnostic | [Link](Tool_Adaptation/T1_Agent_Agnostic/README.md) |
+
+**💡 See [Skills/Framework/](../Skills/Framework/README.md) for detailed framework-to-research mapping.**
 
 ## 📚 What's in Each Category
 
@@ -75,6 +80,22 @@ Research/
 **Impact**: 30% better decision quality
 
 ## 📥 Adding New Research
+
+### Workflow Overview
+
+```
+New Research
+    ↓
+[1] Add to _Inbox/ folder
+    ↓
+[2] AI Agent classifies (A1/A2/T1/T2)
+    ↓
+[3] Auto-moves to category folder
+    ↓
+[4] Human review & validation
+    ↓
+[5] Category README updated
+```
 
 ### Quick Add (Recommended)
 1. **Drop files in `_Inbox/`**: PDF papers, markdown notes, links, etc.
@@ -113,12 +134,17 @@ Research/
 
 ## 📊 Research Status
 
-| Category | Papers | Implementations | Status |
-|----------|--------|----------------|--------|
-| A1: Tool Execution | 15+ | 5+ | 🔴 Not Started |
-| A2: Output Signaled | 20+ | 5+ | 🔴 Not Started |
-| T1: Agent-Agnostic | 10+ | 3+ | 🔴 Not Started |
-| T2: Agent-Supervised | 15+ | 5+ | 🔴 Not Started |
+| Category | Papers | Code Examples | Completeness | Progress |
+|----------|--------|----------------|------------|----------|
+| A1: Tool Execution | 15+ | 5+ | 100% ✅ | Complete |
+| A2: Output Signaled | 20+ | 5+ | 100% ✅ | Complete |
+| T1: Agent-Agnostic | 10+ | 3+ | 85% ⚠️ | In Review |
+| T2: Agent-Supervised | 15+ | 5+ | 90% ⚠️ | In Review |
+
+**📋 Status Legend:**  
+✅ Complete = All papers cataloged, summaries written, code examples provided  
+⚠️ In Progress = Ongoing research and documentation  
+🔴 Not Started = Topic identified but not yet researched
 
 ## 🎓 Learning Resources
 
