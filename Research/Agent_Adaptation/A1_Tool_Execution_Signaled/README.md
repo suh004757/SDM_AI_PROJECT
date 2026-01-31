@@ -102,7 +102,20 @@ update_priority_policy(context, action, reward)
 
 ### 🟡 Medium Priority
 
-#### 4. Tool-R1 (2025)
+#### 4. MAKER: Solving a Million-Step LLM Task (2025) 🔗
+- **Primary Category**: [A2: Agent Output Signaled](../A2_Agent_Output_Signaled/README.md#4-maker-solving-a-million-step-llm-task-with-zero-errors-2025--new)
+- **Relevance to A1**: Multi-agent voting based on execution results
+- **Summary**: Extreme decomposition + multi-agent voting for error correction
+- **AI SDM Application**: Voting mechanism for validating tool execution outcomes
+
+**Why Listed Here**:
+- Voting mechanism evaluates **execution results** from multiple microagents
+- Can be used to validate API call outcomes through consensus
+- Applicable to high-stakes tool executions requiring verification
+
+---
+
+#### 5. Tool-R1 (2025)
 - **Paper**: https://arxiv.org/abs/2509.12867
 - **Code**: https://github.com/YBYBZhang/Tool-R1
 - **Summary**: Reasoning-focused tool use with RL
