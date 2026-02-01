@@ -4,78 +4,92 @@
 
 ## 📚 What is This Project?
 
-이 프로젝트는 **AI SDM (Software Development Management) Agent**를 구축하기 위한 **연구 기반 스킬셋 프레임워크**입니다.
+This project is a **research-based skills framework** for building **AI SDM (Software Development Management) Agents**.
 
-최신 Agentic AI 연구를 SDM Agent의 실제 구현으로 연결하는 다리 역할을 합니다.
+It serves as a bridge connecting cutting-edge Agentic AI research to practical SDM Agent implementations.
 
 ## 🎯 Quick Navigation
 
-### ✨ 새로운 방문자라면?
-→ **[NAVIGATION.md](NAVIGATION.md)** ← 여기부터 시작하세요!
+### ✨ New Visitor?
+→ **[NAVIGATION.md](NAVIGATION.md)** ← Start here!
 
-### 🚀 5분 안에 시작하기
-1. [NAVIGATION.md](NAVIGATION.md) 읽기 (2분)
-2. [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) 사용 (3분)
-3. 해당 카테고리 탐색
+### 🚀 Get Started in 5 Minutes
+1. Read [NAVIGATION.md](NAVIGATION.md) (2 min)
+2. Use [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) (3 min)
+3. Explore relevant categories
 
 ## 📁 Folder Structure
 
 ```
 SDM_AI_PROJECT/
 │
-├─ Research/                       📚 이론 & 논문
-│  ├─ A1_Tool_Execution_Signaled/   → 에이전트가 도구 실행 결과에서 배우기
-│  ├─ A2_Agent_Output_Signaled/     → 에이전트가 출력 품질에서 배우기
-│  ├─ T1_Agent_Agnostic/            → 범용 도구 활용
-│  ├─ T2_Agent_Supervised/          → 맞춤형 도구 개발
-│  ├─ _Inbox/                       → 새 논문 수집소
-│  ├─ DECISION_GUIDE.md             → 🆕 자신의 필요에 맞는 연구 찾기
-│  └─ OVERVIEW.md                   → 전체 분석 & 로드맵
+├─ Research/                       📚 Theory & Papers
+│  ├─ A1_Tool_Execution_Signaled/   → Agents learning from tool execution
+│  ├─ A2_Agent_Output_Signaled/     → Agents learning from output quality
+│  ├─ T1_Agent_Agnostic/            → General-purpose tool utilization
+│  ├─ T2_Agent_Supervised/          → Custom tool development
+│  ├─ _Inbox/                       → New paper collection
+│  ├─ DECISION_GUIDE.md             → 🆕 Find research matching your needs
+│  └─ OVERVIEW.md                   → Complete analysis & roadmap
 │
-├─ Skills/                         🛠️ 구현 & 프레임워크
-│  ├─ Project_Definition/           → 프로젝트 목표 & 범위
-│  ├─ Framework/                    → 🆕 스킬셋 계층 구조
-│  ├─ Technical_Skills/             → 기술 구현
-│  ├─ Cost_Analysis/                → 🆕 비용 & ROI
-│  └─ README.md                     → 🆕 Skills 네비게이션
+├─ Skills/                         🛠️ Implementation & Framework
+│  ├─ Project_Definition/           → Project goals & scope
+│  ├─ Framework/                    → 🆕 Skillset hierarchy
+│  ├─ Technical_Skills/             → Technical implementation
+│  ├─ Cost_Analysis/                → 🆕 Cost & ROI
+│  └─ README.md                     → 🆕 Skills navigation
 │
-├─ NAVIGATION.md                   🗺️ 🆕 메인 네비게이션 가이드
-└─ README.md                       👈 지금 여기
+├─ Core/                           🔧 Core Infrastructure
+│  └─ LLM/                          → 🆕 Multi-LLM Integration System
+│     ├─ Clients/                   → Claude, OpenAI, Gemini, Local LLM
+│     ├─ Utils/                     → Router, Cost Tracker
+│     └─ README.md                  → LLM integration documentation
+│
+├─ NAVIGATION.md                   🗺️ 🆕 Main navigation guide
+└─ README.md                       👈 You are here
 
 ```
 
 ## 🔑 Core Concepts
 
-### Research Layer: 4개 카테고리
+### Research Layer: 4 Categories
 
-| 카테고리 | 설명 | 핵심 기술 |
+| Category | Description | Key Technologies |
 |---|---|---|
-| **A1: Tool Execution Signaled** | 에이전트가 도구 실행 결과에서 배우기 | Reinforcement Learning, DPO |
-| **A2: Agent Output Signaled** | 에이전트가 자신의 출력 품질에서 배우기 | Self-Refinement, Preference Learning |
-| **T1: Agent-Agnostic Tools** | 범용 사전학습 도구 활용 | CLIP, Whisper, Embeddings |
-| **T2: Agent-Supervised Tools** | 에이전트 피드백에 따라 진화하는 도구 | Adaptive Retrieval, Memory Systems |
+| **A1: Tool Execution Signaled** | Agents learning from tool execution results | Reinforcement Learning, DPO |
+| **A2: Agent Output Signaled** | Agents learning from output quality | Self-Refinement, Preference Learning |
+| **T1: Agent-Agnostic Tools** | General-purpose pre-trained tools | CLIP, Whisper, Embeddings |
+| **T2: Agent-Supervised Tools** | Tools evolving with agent feedback | Adaptive Retrieval, Memory Systems |
 
-### Skills Layer: 4개 영역
+### Skills Layer: 4 Domains
 
-| 영역 | 설명 | 주요 내용 |
+| Domain | Description | Key Contents |
 |---|---|---|
-| **Project Definition** | 프로젝트 비전, 목표, 범위 | 프로젝트 문서 (한/영) |
-| **Framework** | 필요한 스킬셋의 계층 구조 | 6가지 핵심 능력 + Research 매핑 |
-| **Technical Skills** | 실제 구현 방법 및 예제 | 기술 상세 + 평가 지표 |
-| **Cost Analysis** | 운영 비용, 리소스, ROI | 비용 모델 + 최적화 전략 |
+| **Project Definition** | Project vision, goals, scope | Project documents (KR/EN) |
+| **Framework** | Skillset hierarchy | 6 core capabilities + Research mapping |
+| **Technical Skills** | Implementation methods & examples | Technical details + evaluation metrics |
+| **Cost Analysis** | Operating costs, resources, ROI | Cost models + optimization strategies |
+
+### Core Infrastructure: Multi-LLM Integration
+
+| Component | Description | Key Features |
+|---|---|---|
+| **LLM Clients** | Unified interface for multiple LLM providers | Claude, OpenAI, Gemini, Local LLM |
+| **Router** | Intelligent LLM selection | Cost-based, capability-based routing |
+| **Cost Tracker** | Budget management & monitoring | Real-time tracking, alerts, export |
 
 ## 🗺️ Navigation Paths
 
-### 👤 "무엇을 해야 할지 모르겠다"
+### 👤 "I don't know where to start"
 ```
 NAVIGATION.md 
     ↓
 Research/DECISION_GUIDE.md 
     ↓
-해당 Research 카테고리
+Relevant Research Category
 ```
 
-### 👤 "프로젝트 전체를 이해하고 싶다"
+### 👤 "I want to understand the entire project"
 ```
 NAVIGATION.md 
     ↓
@@ -83,84 +97,91 @@ Skills/README.md
     ↓
 Research/OVERVIEW.md 
     ↓
-각 카테고리 심층학습
+Deep dive into each category
 ```
 
-### 👤 "특정 기능을 구현하고 싶다"
+### 👤 "I want to implement a specific feature"
 ```
-Skills/Framework/README.md (스킬셋 찾기)
+Skills/Framework/README.md (Find skillset)
     ↓
-Research/DECISION_GUIDE.md (관련 연구)
+Research/DECISION_GUIDE.md (Related research)
     ↓
-Skills/Technical_Skills/README.md (구현방법)
+Skills/Technical_Skills/README.md (Implementation)
 ```
 
 ## 📊 Project Status
 
-| 영역 | 완성도 | 상태 |
+| Area | Completion | Status |
 |---|---|---|
-| Research Documentation | 95% ✅ | 완성 (신규 논문 추가 진행 중) |
-| Skills Framework | 100% ✅ | 완성 |
-| Research-Skills Mapping | 100% ✅ | 완성 (양방향 연결) |
-| Navigation Structure | 100% ✅ | 완성 (Decision Guide 추가) |
-| Technical Implementation | 50% 🔄 | 진행 중 |
-| Cost Modeling | 75% ⚠️ | 검증 필요 |
+| Research Documentation | 95% ✅ | Complete (new papers being added) |
+| Skills Framework | 100% ✅ | Complete |
+| Research-Skills Mapping | 100% ✅ | Complete (bidirectional links) |
+| Navigation Structure | 100% ✅ | Complete (Decision Guide added) |
+| Multi-LLM Integration | 100% ✅ | Complete (ready for API keys) |
+| Technical Implementation | 60% 🔄 | In Progress |
+| Cost Modeling | 75% ⚠️ | Needs validation |
 
 ## 🆕 Recent Improvements
 
-✨ **이번 개선 내용:**
-- ✅ Skills 폴더 계층화 (4가지 명확한 카테고리)
-- ✅ 상위 네비게이션 가이드 추가 (NAVIGATION.md)
-- ✅ Decision Guide 추가 (의사결정 트리 + 체크리스트)
-- ✅ Skills-Research 양방향 매핑
-- ✅ 프로젝트 상태 표시 (Status Dashboard)
-- ✅ 학습 경로 제시 (초급자→중급자→고급자)
+✨ **Latest Updates:**
+- ✅ Skills folder hierarchical structure (4 clear categories)
+- ✅ Top-level navigation guide (NAVIGATION.md)
+- ✅ Decision Guide (decision tree + checklist)
+- ✅ Skills-Research bidirectional mapping
+- ✅ Project status dashboard
+- ✅ Learning paths (beginner→intermediate→advanced)
+- ✅ Multi-LLM Integration System (Claude, OpenAI, Gemini, Local)
 
 ## 🚀 Getting Started (3 Steps)
 
-### Step 1: 구조 이해 (5분)
+### Step 1: Understand the Structure (5 min)
 ```bash
-→ NAVIGATION.md 읽기
+→ Read NAVIGATION.md
 ```
 
-### Step 2: 자신의 필요 파악 (5분)
+### Step 2: Identify Your Needs (5 min)
 ```bash
-→ Research/DECISION_GUIDE.md 사용
+→ Use Research/DECISION_GUIDE.md
 ```
 
-### Step 3: 행동 시작 (시간 변함)
+### Step 3: Take Action (varies)
 ```bash
-→ 해당 카테고리의 README 따라가기
+→ Follow the README in relevant category
 ```
 
 ## 💡 Key Features
 
-✨ **명확한 구조**
-- 2-layer 프레임워크 (Research + Skills)
-- 각 계층의 명확한 목적과 역할
+✨ **Clear Structure**
+- 2-layer framework (Research + Skills)
+- Clear purpose and role for each layer
 
-🗺️ **풍부한 네비게이션**
-- 상단 네비게이션 가이드
-- 의사결정 가이드 & 트리
-- 양방향 링크
+🗺️ **Rich Navigation**
+- Top-level navigation guide
+- Decision guide & tree
+- Bidirectional links
 
-📊 **상태 투명성**
-- 프로젝트별 완성도 표시
-- 다음 단계 명확화
+📊 **Status Transparency**
+- Completion percentage per project
+- Clear next steps
 
-🔗 **통합 경험**
-- Research ↔ Skills 연결
-- Skillset Framework와 논문 매핑
+🔗 **Integrated Experience**
+- Research ↔ Skills connection
+- Skillset Framework mapped to papers
+
+🤖 **Multi-LLM Support**
+- Unified interface for 4 LLM providers
+- Intelligent routing & cost optimization
+- Automatic fallback handling
 
 ## 📚 Complete File Structure
 
 ```
 SDM_AI_PROJECT/
-├── NAVIGATION.md                    🆕 메인 네비게이션
-├── README.md                        ← 현재 파일
+├── NAVIGATION.md                    🆕 Main navigation
+├── README.md                        ← Current file
 │
 ├── Research/
-│   ├── DECISION_GUIDE.md            🆕 의사결정 가이드
+│   ├── DECISION_GUIDE.md            🆕 Decision guide
 │   ├── OVERVIEW.md
 │   ├── README.md
 │   ├── _Inbox/
@@ -173,101 +194,130 @@ SDM_AI_PROJECT/
 │       ├── T1_Agent_Agnostic/README.md
 │       └── T2_Agent_Supervised/README.md
 │
-└── Skills/
-    ├── README.md                    🆕 Skills 개요
-    ├── Project_Definition/
-    │   └── README.md                🆕
-    ├── Framework/
-    │   └── README.md                🆕
-    ├── Technical_Skills/
-    │   └── README.md                🆕
-    └── Cost_Analysis/
-        └── README.md                🆕
+├── Skills/
+│   ├── README.md                    🆕 Skills overview
+│   ├── Project_Definition/
+│   │   └── README.md                🆕
+│   ├── Framework/
+│   │   └── README.md                🆕
+│   ├── Technical_Skills/
+│   │   └── README.md                🆕
+│   └── Cost_Analysis/
+│       └── README.md                🆕
+│
+└── Core/
+    └── LLM/                         🆕 Multi-LLM Integration
+        ├── llm_client.py
+        ├── config.py
+        ├── README.md
+        ├── Clients/
+        │   ├── claude_client.py
+        │   ├── openai_client.py
+        │   ├── gemini_client.py
+        │   └── local_llm_client.py
+        ├── Utils/
+        │   ├── llm_router.py
+        │   └── cost_tracker.py
+        └── Examples/
+            └── examples.py
 ```
 
 ## 🎓 Learning Recommendations
 
 ### 🟢 Complete Beginners
-1. [NAVIGATION.md](NAVIGATION.md) - 5분
-2. [Skills/Framework/README.md](Skills/Framework/README.md) - 20분
-3. [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) - 10분
+1. [NAVIGATION.md](NAVIGATION.md) - 5 min
+2. [Skills/Framework/README.md](Skills/Framework/README.md) - 20 min
+3. [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) - 10 min
 4. Pick ONE category and dive deep
 
 ### 🟡 Intermediate Learners
-1. [Research/OVERVIEW.md](Research/OVERVIEW.md) - 30분
-2. All 4 research categories - 2-3시간
-3. [Skills/Technical_Skills/README.md](Skills/Technical_Skills/README.md) - 2시간
+1. [Research/OVERVIEW.md](Research/OVERVIEW.md) - 30 min
+2. All 4 research categories - 2-3 hours
+3. [Skills/Technical_Skills/README.md](Skills/Technical_Skills/README.md) - 2 hours
+4. [Core/LLM/README.md](Core/LLM/README.md) - 1 hour
 
 ### 🔴 Advanced Practitioners
 1. Deep dive into code examples
 2. Map to your own project
 3. Contribute improvements
+4. Implement custom LLM integrations
 
 ## 📞 Support
 
-**문제가 있거나 길을 잃었나요?**
+**Lost or having issues?**
 
-→ [NAVIGATION.md](NAVIGATION.md)를 보세요. 모든 네비게이션 경로가 있습니다!
+→ Check [NAVIGATION.md](NAVIGATION.md) for all navigation paths!
 
-**특정 주제에 대해 궁금한가요?**
+**Curious about a specific topic?**
 
-→ [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md)를 사용하여 관련 연구를 찾으세요.
+→ Use [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) to find relevant research.
+
+**Need to integrate LLMs?**
+
+→ See [Core/LLM/README.md](Core/LLM/README.md) for multi-LLM integration guide.
 
 ## 📈 Roadmap
 
 ### Phase 1: Research Foundation ✅
-- [x] 4가지 카테고리 정의
-- [x] 주요 논문 수집 및 분류
-- [x] 각 카테고리별 상세 분석
+- [x] Define 4 categories
+- [x] Collect and classify key papers
+- [x] Detailed analysis per category
 
 ### Phase 2: Skills Framework ✅
-- [x] Skillset 계층 구조 정의
-- [x] Framework-Research 매핑
-- [x] Technical skills 문서화
+- [x] Define skillset hierarchy
+- [x] Framework-Research mapping
+- [x] Document technical skills
 
 ### Phase 3: Navigation & Guidance 🆕 ✅
-- [x] 상위 레벨 네비게이션 (NAVIGATION.md)
-- [x] Decision guide 추가
-- [x] Status dashboard 표시
-- [x] 양방향 링크 구성
+- [x] Top-level navigation (NAVIGATION.md)
+- [x] Add decision guide
+- [x] Status dashboard
+- [x] Bidirectional links
 
-### Phase 4: Implementation (진행 중)
-- [ ] 코드 예제 작성
-- [ ] 실제 비용 데이터 수집
-- [ ] 평가 메트릭 개발
-- [ ] 파일럿 프로젝트 실행
+### Phase 4: Core Infrastructure ✅
+- [x] Multi-LLM integration system
+- [x] Intelligent routing
+- [x] Cost tracking & budgeting
+- [x] Documentation & examples
+
+### Phase 5: Implementation (In Progress)
+- [ ] Code examples
+- [ ] Collect real cost data
+- [ ] Develop evaluation metrics
+- [ ] Execute pilot project
 
 ## 🤝 Contributing
 
-이 프로젝트는 **계속 발전**하고 있습니다. 
+This project is **continuously evolving**. 
 
-- 새 논문을 발견했나요? → [Research/_Inbox/](Research/_Inbox/)에 추가
-- 개선 아이디어가 있나요? → 피드백 환영합니다
-- 자신의 케이스를 공유하고 싶나요? → 기술 스킬에 추가
+- Found a new paper? → Add to [Research/_Inbox/](Research/_Inbox/)
+- Have improvement ideas? → Feedback welcome
+- Want to share your case? → Add to technical skills
 
 ## 📋 Version History
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.1 | 2026-01-31 | 🆕 Navigation, Skills 계층화, Decision Guide, 상태 표시 |
+| 1.2 | 2026-02-01 | 🆕 Multi-LLM Integration System |
+| 1.1 | 2026-01-31 | 🆕 Navigation, Skills hierarchy, Decision Guide, Status display |
 | 1.0 | 2026-01-31 | Initial structure (Research + Skills) |
 
 ## 📝 License & Attribution
 
-**원본 Repository**: [Awesome-Adaptation-of-Agentic-AI](https://github.com/suh004757/Awesome-Adaptation-of-Agentic-AI)
+**Original Repository**: [Awesome-Adaptation-of-Agentic-AI](https://github.com/suh004757/Awesome-Adaptation-of-Agentic-AI)
 
-모든 논문과 리소스는 해당 원본을 따릅니다.
+All papers and resources follow their original licenses.
 
 ---
 
 ## 🎯 Next Step
 
-**→ [NAVIGATION.md](NAVIGATION.md)를 읽으세요!** 🚀
+**→ Read [NAVIGATION.md](NAVIGATION.md)!** 🚀
 
-여기서 당신의 목표에 맞는 정확한 경로를 찾을 수 있습니다.
+Find the exact path matching your goals there.
 
 ---
 
 **Status**: 🟢 Active  
-**Last Updated**: 2026-01-31  
+**Last Updated**: 2026-02-01  
 **Maintainer**: AI SDM Project Team
