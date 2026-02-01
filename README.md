@@ -13,6 +13,9 @@ It serves as a bridge connecting cutting-edge Agentic AI research to practical S
 ### ✨ New Visitor?
 → **[NAVIGATION.md](NAVIGATION.md)** ← Start here!
 
+### 🛡️ Core Philosophy
+→ **[STRATEGY.md](STRATEGY.md)** ← **MUST READ: Why we are different**
+
 ### 🚀 Get Started in 5 Minutes
 1. Read [NAVIGATION.md](NAVIGATION.md) (2 min)
 2. Use [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) (3 min)
