@@ -1,12 +1,12 @@
 # AI SDM Agent Project
 
-> **Agentic AI Research + Skills Framework for Building Intelligent SDM Agents**
+> **Governance-First Agentic AI Framework for Enterprise Service Delivery Management**
 
 ## 📚 What is This Project?
 
-This project is a **research-based skills framework** for building **AI SDM (Software Development Management) Agents**.
+This project is a **research-based skills framework** and **governance engine** for building **AI SDM (Software Development Management) Agents**.
 
-It serves as a bridge connecting cutting-edge Agentic AI research to practical SDM Agent implementations.
+Unlike generic AI assistants, this project focuses on **Governance, Responsibility, and Attribution**. We don't just execute tasks; we ensure they are safe, policy-compliant, and audited.
 
 ## 🎯 Quick Navigation
 
@@ -15,295 +15,147 @@ It serves as a bridge connecting cutting-edge Agentic AI research to practical S
 
 ### 🛡️ Core Philosophy
 → **[STRATEGY.md](STRATEGY.md)** ← **MUST READ: Why we are different**
+*Learn about the O.D.A.L. Loop (Observe-Decide-Act-Log) and our "Governance Over Features" strategy.*
 
 ### 🚀 Get Started in 5 Minutes
 1. Read [NAVIGATION.md](NAVIGATION.md) (2 min)
 2. Use [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) (3 min)
-3. Explore relevant categories
+3. Explore the [Skills/Security](Skills/Security/README.md) domain
 
 ## 📁 Folder Structure
 
 ```
 SDM_AI_PROJECT/
 │
-├─ Research/                       📚 Theory & Papers
-│  ├─ A1_Tool_Execution_Signaled/   → Agents learning from tool execution
-│  ├─ A2_Agent_Output_Signaled/     → Agents learning from output quality
-│  ├─ T1_Agent_Agnostic/            → General-purpose tool utilization
-│  ├─ T2_Agent_Supervised/          → Custom tool development
-│  ├─ _Inbox/                       → New paper collection
-│  ├─ DECISION_GUIDE.md             → 🆕 Find research matching your needs
-│  └─ OVERVIEW.md                   → Complete analysis & roadmap
-│
-├─ Skills/                         🛠️ Implementation & Framework
-│  ├─ Project_Definition/           → Project goals & scope
-│  ├─ Framework/                    → 🆕 Skillset hierarchy
-│  ├─ Technical_Skills/             → Technical implementation
-│  ├─ Cost_Analysis/                → 🆕 Cost & ROI
-│  └─ README.md                     → 🆕 Skills navigation
+├─ STRATEGY.md                     🚨 Core Philosophy & Governance Strategy
 │
 ├─ Core/                           🔧 Core Infrastructure
-│  └─ LLM/                          → 🆕 Multi-LLM Integration System
-│     ├─ Clients/                   → Claude, OpenAI, Gemini, Local LLM
-│     ├─ Utils/                     → Router, Cost Tracker
-│     └─ README.md                  → LLM integration documentation
+│  ├─ ODAL/                         → 🆕 O.D.A.L. State Machine (Governance Engine)
+│  └─ LLM/                          → Multi-LLM Integration System
 │
-├─ NAVIGATION.md                   🗺️ 🆕 Main navigation guide
+├─ Skills/                         🛠️ Implementation & Framework
+│  ├─ Security/                     → 🆕 Prompt Guard, Policy Engine, Audit Logger
+│  ├─ Technical_Skills/             → Technical implementation examples
+│  ├─ Framework/                    → Skillset hierarchy
+│  ├─ Project_Definition/           → Project goals & scope
+│  └─ Cost_Analysis/                → Cost & ROI models
+│
+├─ Research/                       📚 Theory & Papers
+│  ├─ DECISION_GUIDE.md             → Find research matching your needs
+│  ├─ A1_Tool_Execution_Signaled/   → Learning from execution
+│  ├─ A2_Agent_Output_Signaled/     → Learning from output
+│  ├─ T1_Agent_Agnostic/            → General tools
+│  └─ T2_Agent_Supervised/          → Custom tools
+│
+├─ NAVIGATION.md                   🗺️ Main navigation guide
 └─ README.md                       👈 You are here
-
 ```
 
 ## 🔑 Core Concepts
 
-### Research Layer: 4 Categories
+### 1. The O.D.A.L. Loop (Governance Engine)
+We operate on a strict **Observe → Decide → Act → Log** cycle:
+- **Observe**: Validate inputs with **Prompt Guard**.
+- **Decide**: Check **Policy Engine** (Budget, Access) before approval.
+- **Act**: Execute only if authorized.
+- **Log**: Record decision reasoning in **Audit Logger**.
 
-| Category | Description | Key Technologies |
-|---|---|---|
-| **A1: Tool Execution Signaled** | Agents learning from tool execution results | Reinforcement Learning, DPO |
-| **A2: Agent Output Signaled** | Agents learning from output quality | Self-Refinement, Preference Learning |
-| **T1: Agent-Agnostic Tools** | General-purpose pre-trained tools | CLIP, Whisper, Embeddings |
-| **T2: Agent-Supervised Tools** | Tools evolving with agent feedback | Adaptive Retrieval, Memory Systems |
-
-### Skills Layer: 4 Domains
+### 2. Skills Layer: 5 Domains
 
 | Domain | Description | Key Contents |
 |---|---|---|
-| **Project Definition** | Project vision, goals, scope | Project documents (KR/EN) |
-| **Framework** | Skillset hierarchy | 6 core capabilities + Research mapping |
-| **Technical Skills** | Implementation methods & examples | Technical details + evaluation metrics |
-| **Cost Analysis** | Operating costs, resources, ROI | Cost models + optimization strategies |
+| **Security** | 🆕 **Governance & Safety** | Prompt Guard, Policy Engine, Audit Logger |
+| **Project Definition** | Vision & Scope | Goals, Success Metrics |
+| **Framework** | Skillset Hierarchy | Capability Mapping |
+| **Technical Skills** | Implementation | Code patterns, Cloud skills |
+| **Cost Analysis** | ROI & Budgeting | Cost models, Optimization |
 
-### Core Infrastructure: Multi-LLM Integration
-
-| Component | Description | Key Features |
-|---|---|---|
-| **LLM Clients** | Unified interface for multiple LLM providers | Claude, OpenAI, Gemini, Local LLM |
-| **Router** | Intelligent LLM selection | Cost-based, capability-based routing |
-| **Cost Tracker** | Budget management & monitoring | Real-time tracking, alerts, export |
+### 3. Research Layer: 4 Categories
+| Category | Focus |
+|---|---|
+| **A1 & A2** | **Agent Adaptation**: How agents learn and improve |
+| **T1 & T2** | **Tool Adaptation**: How agents use and build tools |
 
 ## 🗺️ Navigation Paths
 
-### 👤 "I don't know where to start"
+### 👤 "I want to build a Secure Agent"
 ```
-NAVIGATION.md 
+Skills/Security/README.md 
     ↓
-Research/DECISION_GUIDE.md 
+Core/ODAL/Examples/odal_demo.py
     ↓
-Relevant Research Category
+STRATEGY.md (Understanding the philosophy)
 ```
 
-### 👤 "I want to understand the entire project"
+### 👤 "I want to understand the framework"
 ```
 NAVIGATION.md 
     ↓
 Skills/README.md 
     ↓
 Research/OVERVIEW.md 
-    ↓
-Deep dive into each category
-```
-
-### 👤 "I want to implement a specific feature"
-```
-Skills/Framework/README.md (Find skillset)
-    ↓
-Research/DECISION_GUIDE.md (Related research)
-    ↓
-Skills/Technical_Skills/README.md (Implementation)
 ```
 
 ## 📊 Project Status
 
 | Area | Completion | Status |
 |---|---|---|
-| Research Documentation | 95% ✅ | Complete (new papers being added) |
+| **Governance Engine (O.D.A.L.)** | 100% ✅ | **Complete & Verified** |
+| **Security Skills** | 100% ✅ | **Complete (Prompt Guard, Policy, Audit)** |
+| Research Documentation | 95% ✅ | Complete |
 | Skills Framework | 100% ✅ | Complete |
-| Research-Skills Mapping | 100% ✅ | Complete (bidirectional links) |
-| Navigation Structure | 100% ✅ | Complete (Decision Guide added) |
-| Multi-LLM Integration | 100% ✅ | Complete (ready for API keys) |
-| Technical Implementation | 60% 🔄 | In Progress |
+| Multi-LLM Integration | 100% ✅ | Complete |
+| Technical Implementation | 70% 🔄 | In Progress |
 | Cost Modeling | 75% ⚠️ | Needs validation |
 
 ## 🆕 Recent Improvements
 
-✨ **Latest Updates:**
-- ✅ Skills folder hierarchical structure (4 clear categories)
-- ✅ Top-level navigation guide (NAVIGATION.md)
-- ✅ Decision Guide (decision tree + checklist)
-- ✅ Skills-Research bidirectional mapping
-- ✅ Project status dashboard
-- ✅ Learning paths (beginner→intermediate→advanced)
-- ✅ Multi-LLM Integration System (Claude, OpenAI, Gemini, Local)
+✨ **Latest Updates (v1.3):**
+- 🛡️ **Security Skills Domain**: Added Prompt Guard (Multi-language), Policy Engine, and Audit Logger.
+- ⚙️ **O.D.A.L. Core Engine**: Implemented the state machine that enforces "Policy before Syntax".
+- 📝 **Governance Strategy**: Codified the responsibility structure in STRATEGY.md.
+- 🔧 **Bug Fixes**: Improved Cost Tracker integration and Windows compatibility.
 
-## 🚀 Getting Started (3 Steps)
+## 🚀 Getting Started
 
-### Step 1: Understand the Structure (5 min)
+### Step 1: Understand Governance (5 min)
 ```bash
-→ Read NAVIGATION.md
+→ Read STRATEGY.md
 ```
 
-### Step 2: Identify Your Needs (5 min)
+### Step 2: See it in Action (10 min)
 ```bash
-→ Use Research/DECISION_GUIDE.md
+→ Run Core/ODAL/Examples/odal_demo.py
 ```
 
-### Step 3: Take Action (varies)
+### Step 3: Explore Skills (varies)
 ```bash
-→ Follow the README in relevant category
+→ Read Skills/Security/README.md
 ```
 
 ## 💡 Key Features
 
-✨ **Clear Structure**
-- 2-layer framework (Research + Skills)
-- Clear purpose and role for each layer
+🛡️ **Governance-First Architecture**
+- Inputs validated for Prompt Injection (EN/KO/JA/ZH)
+- Actions validated against Budget & Access Policies
+- All decisions audit-logged
 
-🗺️ **Rich Navigation**
-- Top-level navigation guide
-- Decision guide & tree
-- Bidirectional links
+🤖 **Multi-LLM Intelligence**
+- Unified interface for Claude, OpenAI, Gemini, Local
+- Intelligent routing based on cost & capability
 
-📊 **Status Transparency**
-- Completion percentage per project
-- Clear next steps
-
-🔗 **Integrated Experience**
-- Research ↔ Skills connection
-- Skillset Framework mapped to papers
-
-🤖 **Multi-LLM Support**
-- Unified interface for 4 LLM providers
-- Intelligent routing & cost optimization
-- Automatic fallback handling
-
-## 📚 Complete File Structure
-
-```
-SDM_AI_PROJECT/
-├── NAVIGATION.md                    🆕 Main navigation
-├── README.md                        ← Current file
-│
-├── Research/
-│   ├── DECISION_GUIDE.md            🆕 Decision guide
-│   ├── OVERVIEW.md
-│   ├── README.md
-│   ├── _Inbox/
-│   │   ├── README.md
-│   │   └── classification_prompt.md
-│   ├── Agent_Adaptation/
-│   │   ├── A1_Tool_Execution_Signaled/README.md
-│   │   └── A2_Agent_Output_Signaled/README.md
-│   └── Tool_Adaptation/
-│       ├── T1_Agent_Agnostic/README.md
-│       └── T2_Agent_Supervised/README.md
-│
-├── Skills/
-│   ├── README.md                    🆕 Skills overview
-│   ├── Project_Definition/
-│   │   └── README.md                🆕
-│   ├── Framework/
-│   │   └── README.md                🆕
-│   ├── Technical_Skills/
-│   │   └── README.md                🆕
-│   └── Cost_Analysis/
-│       └── README.md                🆕
-│
-└── Core/
-    └── LLM/                         🆕 Multi-LLM Integration
-        ├── llm_client.py
-        ├── config.py
-        ├── README.md
-        ├── Clients/
-        │   ├── claude_client.py
-        │   ├── openai_client.py
-        │   ├── gemini_client.py
-        │   └── local_llm_client.py
-        ├── Utils/
-        │   ├── llm_router.py
-        │   └── cost_tracker.py
-        └── Examples/
-            └── examples.py
-```
-
-## 🎓 Learning Recommendations
-
-### 🟢 Complete Beginners
-1. [NAVIGATION.md](NAVIGATION.md) - 5 min
-2. [Skills/Framework/README.md](Skills/Framework/README.md) - 20 min
-3. [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) - 10 min
-4. Pick ONE category and dive deep
-
-### 🟡 Intermediate Learners
-1. [Research/OVERVIEW.md](Research/OVERVIEW.md) - 30 min
-2. All 4 research categories - 2-3 hours
-3. [Skills/Technical_Skills/README.md](Skills/Technical_Skills/README.md) - 2 hours
-4. [Core/LLM/README.md](Core/LLM/README.md) - 1 hour
-
-### 🔴 Advanced Practitioners
-1. Deep dive into code examples
-2. Map to your own project
-3. Contribute improvements
-4. Implement custom LLM integrations
-
-## 📞 Support
-
-**Lost or having issues?**
-
-→ Check [NAVIGATION.md](NAVIGATION.md) for all navigation paths!
-
-**Curious about a specific topic?**
-
-→ Use [Research/DECISION_GUIDE.md](Research/DECISION_GUIDE.md) to find relevant research.
-
-**Need to integrate LLMs?**
-
-→ See [Core/LLM/README.md](Core/LLM/README.md) for multi-LLM integration guide.
-
-## 📈 Roadmap
-
-### Phase 1: Research Foundation ✅
-- [x] Define 4 categories
-- [x] Collect and classify key papers
-- [x] Detailed analysis per category
-
-### Phase 2: Skills Framework ✅
-- [x] Define skillset hierarchy
-- [x] Framework-Research mapping
-- [x] Document technical skills
-
-### Phase 3: Navigation & Guidance 🆕 ✅
-- [x] Top-level navigation (NAVIGATION.md)
-- [x] Add decision guide
-- [x] Status dashboard
-- [x] Bidirectional links
-
-### Phase 4: Core Infrastructure ✅
-- [x] Multi-LLM integration system
-- [x] Intelligent routing
-- [x] Cost tracking & budgeting
-- [x] Documentation & examples
-
-### Phase 5: Implementation (In Progress)
-- [ ] Code examples
-- [ ] Collect real cost data
-- [ ] Develop evaluation metrics
-- [ ] Execute pilot project
-
-## 🤝 Contributing
-
-This project is **continuously evolving**. 
-
-- Found a new paper? → Add to [Research/_Inbox/](Research/_Inbox/)
-- Have improvement ideas? → Feedback welcome
-- Want to share your case? → Add to technical skills
+📚 **Research-Backed**
+- Built on top of "Adaptation of Agentic AI" research
+- Bidirectional mapping between theory and practice
 
 ## 📋 Version History
 
 | Version | Date | Changes |
 |---|---|---|
+| **1.3** | **2026-02-02** | 🆕 **Security Skills & O.D.A.L. Governance Engine** |
 | 1.2 | 2026-02-01 | 🆕 Multi-LLM Integration System |
-| 1.1 | 2026-01-31 | 🆕 Navigation, Skills hierarchy, Decision Guide, Status display |
-| 1.0 | 2026-01-31 | Initial structure (Research + Skills) |
+| 1.1 | 2026-01-31 | 🆕 Navigation, Skills hierarchy, Decision Guide |
+| 1.0 | 2026-01-31 | Initial structure |
 
 ## 📝 License & Attribution
 
@@ -313,14 +165,6 @@ All papers and resources follow their original licenses.
 
 ---
 
-## 🎯 Next Step
-
-**→ Read [NAVIGATION.md](NAVIGATION.md)!** 🚀
-
-Find the exact path matching your goals there.
-
----
-
-**Status**: 🟢 Active  
-**Last Updated**: 2026-02-01  
+**Status**: 🟢 Active & Governed  
+**Last Updated**: 2026-02-02  
 **Maintainer**: AI SDM Project Team
