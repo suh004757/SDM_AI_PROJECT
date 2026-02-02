@@ -1,0 +1,20 @@
+{
+  "policy_id": "ACCESS_001",
+  "name": "Access Control",
+  "description": "Enforce permission-based access control",
+  "enabled": true,
+  "rules": [
+    {
+      "id": "admin_only",
+      "condition": "action_type == 'admin' and user_role != 'admin'",
+      "action": "REJECT",
+      "message": "Administrative actions require admin role"
+    },
+    {
+      "id": "production_approval",
+      "condition": "environment == 'production'",
+      "action": "REQUIRE_APPROVAL",
+      "message": "Production changes require approval"
+    }
+  ]
+}

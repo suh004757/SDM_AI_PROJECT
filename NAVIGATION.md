@@ -23,6 +23,10 @@ SDM_AI_PROJECT
 │
 ├─ STRATEGY.md         🚨 START HERE: Core Philosophy & Governance Strategy
 │
+├─ Core/               🔧 Core Engine & Infrastructure
+│  ├─ ODAL/            O.D.A.L. State Machine (Observe-Decide-Act-Log)
+│  └─ LLM/             Multi-LLM Intelligence Layer
+│
 ├─ Research/           📚 What? Theory, Papers, Learning
 │  ├─ A1: Tool Execution Signaled     (Learning from tool results)
 │  ├─ A2: Agent Output Signaled       (Learning from output quality)
@@ -33,6 +37,10 @@ SDM_AI_PROJECT
    ├─ Project_Definition    (Goals & Scope)
    ├─ Framework             (Skillset Hierarchy)
    ├─ Technical_Skills      (Technical Implementation)
+   ├─ Security              🔒 Governance & Security Layer
+   │  ├─ Prompt_Guard       (Injection Attack Defense)
+   │  ├─ Policy_Enforcement (Policy-as-Code Engine)
+   │  └─ Audit_Logging      (Compliance Tracking)
    └─ Cost_Analysis        (ROI & Budgeting)
 ```
 

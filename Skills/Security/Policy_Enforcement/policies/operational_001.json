@@ -1,0 +1,20 @@
+{
+  "policy_id": "OPERATIONAL_001",
+  "name": "Operational Limits",
+  "description": "Enforce resource and operational constraints",
+  "enabled": true,
+  "rules": [
+    {
+      "id": "max_instances",
+      "condition": "requested_instances > 10",
+      "action": "REJECT",
+      "message": "Cannot provision more than 10 instances"
+    },
+    {
+      "id": "business_hours",
+      "condition": "is_business_hours == False and action_type == 'deployment'",
+      "action": "WARN",
+      "message": "Deployment outside business hours"
+    }
+  ]
+}

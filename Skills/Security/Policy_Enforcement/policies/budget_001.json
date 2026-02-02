@@ -1,0 +1,26 @@
+{
+  "policy_id": "BUDGET_001",
+  "name": "Monthly Cost Cap",
+  "description": "Prevent actions that exceed monthly budget",
+  "enabled": true,
+  "rules": [
+    {
+      "id": "budget_hard_limit",
+      "condition": "proposed_cost + current_month_cost > budget_limit",
+      "action": "REJECT",
+      "message": "Action would exceed monthly budget of ${budget_limit}"
+    },
+    {
+      "id": "high_cost_approval",
+      "condition": "proposed_cost > 1000",
+      "action": "REQUIRE_APPROVAL",
+      "message": "High-cost action (>${proposed_cost}) requires manual approval"
+    },
+    {
+      "id": "cost_warning",
+      "condition": "proposed_cost > 500",
+      "action": "WARN",
+      "message": "High-cost action detected: ${proposed_cost}"
+    }
+  ]
+}
