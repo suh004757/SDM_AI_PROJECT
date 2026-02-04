@@ -398,33 +398,33 @@ CostNav discovered that \*\*collision avoidance\*\* was the key optimization tar
 
 1\. \*\*Confidence-Based Routing\*\*
 
-&nbsp;  - High confidence (>90%): Auto-approve, minimal review
+- High confidence (>90%): Auto-approve, minimal review
 
-&nbsp;  - Medium confidence (70-90%): Standard review
+- Medium confidence (70-90%): Standard review
 
-&nbsp;  - Low confidence (<70%): Flag for human, don't attempt
+- Low confidence (<70%): Flag for human, don't attempt
 
 
 
 2\. \*\*Budget-Constrained Reasoning\*\* (from Agents Arcade)
 
-&nbsp;  ```
+ ```
 
-&nbsp;  "You have $X budget for this task. If you cannot complete 
+"You have $X budget for this task. If you cannot complete 
 
-&nbsp;  within budget, provide the best partial answer possible."
+  within budget, provide the best partial answer possible."
 
-&nbsp;  ```
+  ```
 
 
 
 3\. \*\*Error Prevention > Error Correction\*\*
 
-&nbsp;  - Validate assumptions before generating
+ - Validate assumptions before generating
 
-&nbsp;  - Request clarification when uncertain
+ - Request clarification when uncertain
 
-&nbsp;  - Use structured outputs to reduce format errors
+ - Use structured outputs to reduce format errors
 
 
 
